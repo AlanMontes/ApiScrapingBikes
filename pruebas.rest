@@ -1,0 +1,41 @@
+###
+#RUTA OBTENER TODAS LAS BICICLETAS
+GET http://127.0.0.1:8000/search_bikes/
+
+###
+#RUTA OBTENER BICICLETAS POR ID
+GET http://127.0.0.1:8000/search_bike/10/
+
+
+###
+#RUTA OBTENER BICICLETAS POR NOMBRE
+GET http://127.0.0.1:8000/search_bike_name/Grand Canyon 7/
+
+###
+#RUTA PARA AÑADIR BICICLETA
+POST http://127.0.0.1:8000/add_bike
+Content-Type: application/json
+
+{
+    "bicicleta": "Giant",
+    "precio": "2500 MX",
+    "especificaciones": "shimano 3000",
+    "categoria": "Bicicleta de Montaña"
+}
+
+
+###
+#RUTA PARA CAMBIAR VALORES DE UNA BICICLETA
+PUT http://127.0.0.1:8000/change_bike/261/
+Content-Type: application/json
+
+{
+    "bicicleta": "Giant pro",
+    "precio": "2500 MX",
+    "especificaciones": "shimano 3000",
+    "categoria": "Bicicleta de Montaña"
+}
+
+###
+#RUTA PARA CAMBIAR VALORES DE UNA BICICLETA
+DELETE http://127.0.0.1:8000/delete_bike/261/
